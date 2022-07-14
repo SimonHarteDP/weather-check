@@ -10,14 +10,17 @@ const SearchBar = (props) => {
   const [items, setItems] = useState(propsToItems(cities));
 
   return (
-    <DropDownPicker
-      open={open}
-      value={value}
-      items={items}
-      setOpen={setOpen}
-      setValue={setValue}
-      setItems={setItems}
-    />
+    <View>
+      <Text>Cities</Text>
+      <DropDownPicker
+        open={open}
+        value={value}
+        items={items}
+        setOpen={setOpen}
+        setValue={setValue}
+        setItems={setItems}
+      />
+    </View>
   );
 };
 export default SearchBar;
@@ -30,8 +33,3 @@ const propsToItems = (list) => {
 
   return list;
 };
-const searchStyle = StyleSheet.create({
-  container: {
-    alignContent: "center",
-  },
-});
